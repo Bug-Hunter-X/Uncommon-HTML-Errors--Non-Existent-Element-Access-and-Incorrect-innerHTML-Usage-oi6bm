@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv">
+    <p>This paragraph is inside a div.</p>
+  </div>
+  <script>
+    // Check if the element exists before accessing it
+    let myElement = document.getElementById("myDiv");
+    if (myElement) {
+      myElement.innerHTML = "Modified content";
+    } else {
+      console.error("Element with ID 'myDiv' not found.");
+    }
+
+    // Use strings for innerHTML assignment
+    let anotherElement = document.getElementById("myDiv");
+    if (anotherElement) {
+      anotherElement.innerHTML = "123"; //Correctly assigning a string
+    }
+  </script>
+</body>
+</html>
