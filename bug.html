@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv">
+    <p>This paragraph is inside a div.</p>
+  </div>
+  <script>
+    // Attempting to access a non-existent element
+    let myElement = document.getElementById("myDiv2");
+    if (myElement) {
+      myElement.innerHTML = "Modified content";
+    } else {
+      console.error("Element with ID 'myDiv2' not found.");
+    }
+
+    // Incorrect use of innerHTML
+    let anotherElement = document.getElementById("myDiv");
+    if (anotherElement) {
+      anotherElement.innerHTML = 123; //Trying to assign a number which is not a string
+    }
+  </script>
+</body>
+</html>
